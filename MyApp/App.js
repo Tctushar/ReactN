@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react-native";
 import {
   View,
   Text,
@@ -13,7 +13,7 @@ const handleSearch = () => {
 
 const Header = () => {
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1, marginTop: 60 }}>
       {/* Original Header with Text Links */}
       <View style={styles.header}>
         <Text style={styles.title}>
@@ -53,7 +53,7 @@ const Header = () => {
         <TouchableOpacity>
           <Image
             source={{
-              uri: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg",
+              uri: "https://www.foodiesfeed.com/wp-content/uploads/2023/04/strawberry-milk-splash.jpg",
             }} // Replace with your image URL
             style={styles.image}
           />
@@ -61,7 +61,7 @@ const Header = () => {
         <TouchableOpacity>
           <Image
             source={{
-              uri: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg",
+              uri: "https://www.foodiesfeed.com/wp-content/uploads/2023/06/ice-cream-cone-splash.jpg",
             }} // Replace with your image URL
             style={styles.image}
           />
@@ -74,37 +74,33 @@ const Header = () => {
 const styles = StyleSheet.create({
   headerContainer: {
     marginTop: 35,
-    width:"100%",
-   
+    width: "100%",
   },
- 
+
   searchButton: {
     backgroundColor: "black",
     width: "90%",
     color: "blue",
     border: "none",
     padding: 10,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    borderRadius:13,
+    marginLeft: "auto",
+    marginRight: "auto",
+    borderRadius: 13,
   },
 
   searchText: {
     color: "white",
     textAlign: "center",
     borderBlockColor: "yellow",
-    fontSize:14,
-    
+    fontSize: 14,
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 16,
-    paddingTop: 60, 
-    padding:10,
+    padding: 10,
     backgroundColor: "black",
-
   },
   title: {
     fontSize: 24,
@@ -132,11 +128,19 @@ const styles = StyleSheet.create({
     height: "auto",
   },
   image: {
-    width: 350,
-    height: 300,
-    marginRight: 16,
-    borderRadius: 10,
-    objectFit: "cover",
+    width: 400,
+    // height: 300,
+    // marginRight: 16,
+    // borderRadius: 10,
+    // resizeMode:'cover'
+    // // justifyContent:'space-evenly'
+    flex: 1,
+    // width: '100%',
+    // height: '100%',
+    resizeMode: "contain",
+    alignSelf: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 });
 
