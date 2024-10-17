@@ -9,12 +9,11 @@ import {
 } from "react-native";
 const handleSearch = () => {
   // search logic here
-
 };
 
 const Header = () => {
   return (
-    <View style={styles.headerContainer}>
+    <View style={{flex: 1}}>
       {/* Original Header with Text Links */}
       <View style={styles.header}>
         <Text style={styles.title}>
@@ -74,32 +73,38 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    padding: 16,
-    marginTop: 39,
+    marginTop: 35,
+    width:"100%",
+   
   },
-  body: {
-    margin: 0,
-    padding: 0,
-  },
+ 
   searchButton: {
     backgroundColor: "black",
-    width: "auto",
+    width: "90%",
     color: "blue",
     border: "none",
     padding: 10,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    borderRadius:13,
   },
- 
+
   searchText: {
     color: "white",
-    textAlign:'center',
-    borderBlockColor:'yellow',
+    textAlign: "center",
+    borderBlockColor: "yellow",
+    fontSize:14,
+    
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 16, // Adds spacing between header and slider
+    marginBottom: 16,
+    paddingTop: 60, 
+    padding:10,
     backgroundColor: "black",
+
   },
   title: {
     fontSize: 24,
